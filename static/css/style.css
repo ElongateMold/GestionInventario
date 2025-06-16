@@ -1,0 +1,206 @@
+:root {
+    --primary-bg: #F5ECB6;
+    --primary-text: #06402B;
+    --sidebar-bg: #06402B;
+    --sidebar-text: #F5ECB6;
+    --accent-color: #D4A373;
+    --white: #FFFFFF;
+    --border-color: #E0E0E0;
+    --success-bg: #D4EDDA;
+    --success-text: #155724;
+    --error-bg: #F8D7DA;
+    --error-text: #721C24;
+    --font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+}
+
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .logo h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.navigation .nav-item {
+    display: block;
+    background-color: transparent;
+    border: 2px solid var(--sidebar-text);
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-bottom: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--sidebar-text);
+    font-size: 24px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navigation .nav-item:hover {
+    background-color: var(--sidebar-text);
+    color: var(--sidebar-bg);
+}
+
+.content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.header h1 {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.table-container {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+thead th {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--primary-text);
+}
+
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.no-data {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-edit {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-primary {
+    background-color: var(--primary-text);
+    color: var(--white);
+}
+
+.btn-secondary {
+    background-color: #ccc;
+    color: #333;
+}
+
+td.actions {
+    display: flex;
+    gap: 10px;
+}
+
+
+.form-container {
+    max-width: 700px;
+    margin: auto;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.flash-messages {
+    margin-bottom: 20px;
+}
+.flash {
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.flash.success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+}
+.flash.error {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+}
